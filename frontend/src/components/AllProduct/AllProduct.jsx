@@ -46,14 +46,14 @@ function AllProduct() {
     let currentPage = value;
     let limitDef, offsetDef;
     // if (search.length) {
-    //   // limitDef = total;
-    //   // offsetDef = parseInt(allProducts[0].id) - 1;
     //   if (total <= limit) {
     //     limitDef = parseInt(allProducts[total].id)
     //     offsetDef = parseInt(allProducts[0].id) - 1;
-    //   } else {
-    //      offsetDef = parseInt(allProducts[limit * currentPage - limit-1].id) - 1;
-    //      limitDef = parseInt(allProducts[limit-1].id);
+    //   } 
+    //   else {
+    //      offsetDef = total - total % limit
+    //      limitDef = currentPage * limit
+    //      console.log(offsetDef, limitDef);
     //   }
     //   await GetServiceApi.getAllPosts(limitDef, offsetDef).then((res) => {
     //     dispatch(setProducts(res.data.products));

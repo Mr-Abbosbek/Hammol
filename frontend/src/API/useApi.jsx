@@ -16,6 +16,10 @@ class GetServiceApi {
     const response = await service.get("/category");
     return response;
   }
+  static async getSingleProduct(id) {
+    const response = await service.get("/product/" + id);
+    return response;
+  }
 }
 
 export default GetServiceApi;

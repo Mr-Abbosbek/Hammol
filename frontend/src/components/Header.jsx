@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import { Link } from "react-router-dom";
 
 function Header() {
   const [mode, setMode] = useState(false);
@@ -13,7 +14,7 @@ function Header() {
   return (
     <div className="py-4 shadow-sm position-fixed w-100 header_block">
       <div className="container d-flex justify-content-between align-item-center">
-        <h2 className="m-0">Product</h2>
+        <h2 className="m-0 fw-bold"><Link to="/">Product</Link></h2>
         <button
           className={
             !mode

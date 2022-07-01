@@ -15,7 +15,7 @@ function InputUi({ search, setSearch }) {
       </InputLabel>
       <Input
         type="text"
-        className="w-50 search-input"
+        className="w-50 search-input pb-1"
         id="standard-adornment-password"
         value={search || ""}
         onChange={(e) => setSearch(e.target.value)}

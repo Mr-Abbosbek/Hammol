@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AllProduct from "./components/AllProduct/AllProduct";
 import Header from "./components/Header";
-import Single from "./components/Single";
+import Single from "./components/SingleProduct/Single";
 
 function App() {
 
