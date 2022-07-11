@@ -45,26 +45,12 @@ function AllProduct() {
   const handlePageClick = async (e, value) => {
     let currentPage = value;
     let limitDef, offsetDef;
-    // if (search.length) {
-    //   if (total <= limit) {
-    //     limitDef = parseInt(allProducts[total].id)
-    //     offsetDef = parseInt(allProducts[0].id) - 1;
-    //   } 
-    //   else {
-    //      offsetDef = total - total % limit
-    //      limitDef = currentPage * limit
-    //      console.log(offsetDef, limitDef);
-    //   }
-    //   await GetServiceApi.getAllPosts(limitDef, offsetDef).then((res) => {
-    //     dispatch(setProducts(res.data.products));
-    //   });
-    // } else {
-      limitDef = limit * currentPage;
-      offsetDef = limitDef - limit;
-      await GetServiceApi.getAllPosts(limitDef, offsetDef).then((res) => {
-        dispatch(setProducts(res.data.products));
-      });
-    // }
+    limitDef = limit * currentPage;
+    offsetDef = limitDef - limit;
+    console.log(offsetDef, limitDef);
+    await GetServiceApi.getAllPosts(limitDef, offsetDef, search).then((res) => {
+      dispatch(setProducts(res.data.products));
+    });
   };
 
   return (
