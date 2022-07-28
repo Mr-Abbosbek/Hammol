@@ -23,7 +23,7 @@ function Header() {
           }
           onClick={bgColorHandler}
         >
-          <span className="px-2">{!mode ? <DarkModeIcon /> : <WbSunnyIcon />}{""}</span>
+          <span className="px-2">{!mode ? <DarkModeIcon /> : <WbSunnyIcon />}{" "}</span>
           {!mode ? "Dark mode" : "Light mode"}{" "}
         </button>
       </div>
