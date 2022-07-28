@@ -5,21 +5,26 @@ function Select(props) {
   const currencies = [
     {
       id: 1,
+      title: "3",
+      value: 3,
+    },
+    {
+      id: 2,
       title: "5",
       value: 5,
     },
     {
-      id: 2,
+      id: 3,
       title: "6",
       value: 6,
     },
     {
-      id: 3,
+      id: 4,
       title: "10",
       value: 10,
     },
     {
-      id: 4,
+      id: 5,
       title: "15",
       value: 15,
     },

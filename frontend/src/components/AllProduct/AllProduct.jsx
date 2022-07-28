@@ -13,7 +13,7 @@ function AllProduct() {
   const [category, setCategory] = useState("All");
   const [pageCount, setPageCount] = useState(0);
   const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(6);
+  const [limit, setLimit] = useState(3);
   const [offset] = useState(0);
 
   const dispatch = useDispatch();
@@ -48,9 +48,15 @@ function AllProduct() {
     limitDef = limit * currentPage;
     offsetDef = limitDef - limit;
     console.log(offsetDef, limitDef);
-    await GetServiceApi.getAllPosts(limitDef, offsetDef, search).then((res) => {
-      dispatch(setProducts(res.data.products));
-    });
+    if (category === "All") {
+      await GetServiceApi.getAllPosts(limitDef, offsetDef, search, "").then((res) => {
+        dispatch(setProducts(res.data.products));
+      });
+    } else {
+      await GetServiceApi.getAllPosts(limitDef, offsetDef, search, category).then((res) => {
+        dispatch(setProducts(res.data.products));
+      });
+    }
   };
 
   return (
